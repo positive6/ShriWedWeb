@@ -33,7 +33,40 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+.embed-container {
+  position: relative;
+  width: 100%; 
+  padding-bottom: 56.25%;   /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) 
+  padding: 0% !important; */
+}
 
+.embed {
+  
+  box-sizing: border-box;
+  padding: 0%;
+  border: none;
+  /*border-top: 4px solid #ff0000;*/
+
+  position: relative;
+  /*
+  top: 5%;
+  bottom: 5%;
+  */
+  position: absolute !important;
+  top: 53%;
+  left: 50%; 
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 87vw ;
+  height: 48.935vw;
+  
+  box-sizing:border-box;
+
+  background: #000000;
+}
+
+</style>
 </head>
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
@@ -334,6 +367,33 @@
 		</div>
 	</div>
 	<!-- End Family -->
+
+	<!-- Start Youtube-->
+	<div id="family" class="family-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Watch Us Live</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 ml-auto mr-auto embed-container">
+					<iframe  
+						src="https://www.youtube.com/embed/vxzfsBDx590" 
+						scrolling="no"
+						class = "embed ml-auto mr-auto rounded"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						autoplay = "true"
+						allowfullscreen>
+					  </iframe>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+	<!--End Youtube-->
 	
 	<!-- Start Gallery -->
 	<div id="gallery" class="gallery-box">
