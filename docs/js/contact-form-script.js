@@ -25,8 +25,9 @@ function submitForm(){
         url: "https://script.google.com/macros/s/AKfycbyVvBrN7n8VkFXzTSLBFExWxrSEAbXVDr5g-R8OuSin_1UpQEw/exec",
         data: $form.serializeObject(),
         success : function(text){
-            console.log(typeof text);
-            if (text){
+            //console.log(typeof text);
+            console.log(text.result);
+            if (text.result == "success"){
                 formSuccess();
             } else {
                 formError();
