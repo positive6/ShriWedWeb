@@ -17,14 +17,17 @@ function submitForm(){
     var email = $("#email").val();
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
-
+    var $form = $('form#contactForm');
 
     $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
+        type: "GET",
+        dataType: "json",
+        url: "https://script.google.com/macros/s/AKfycbyVvBrN7n8VkFXzTSLBFExWxrSEAbXVDr5g-R8OuSin_1UpQEw/exec",
+        data: $form.serializeObject(),
         success : function(text){
-            if (text == "success"){
+            //console.log(typeof text);
+            console.log(text.result);
+            if (text.result == "success"){
                 formSuccess();
             } else {
                 formError();
@@ -36,7 +39,7 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Message Submitted!");
 }
 
 function formError(){
