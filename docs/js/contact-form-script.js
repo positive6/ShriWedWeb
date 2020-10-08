@@ -25,7 +25,8 @@ function submitForm(){
         url: "https://script.google.com/macros/s/AKfycbyVvBrN7n8VkFXzTSLBFExWxrSEAbXVDr5g-R8OuSin_1UpQEw/exec",
         data: $form.serializeObject(),
         success : function(text){
-            if (text == "success"){
+            console.log(typeof text);
+            if (text){
                 formSuccess();
             } else {
                 formError();
@@ -37,7 +38,7 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Message Submitted!");
 }
 
 function formError(){
