@@ -364,7 +364,7 @@ button:focus{
 
 .lbox-caption {
     position: absolute;
-    margin: 0 auto;
+	margin: 0 auto;
     left: 0;
     right: 0;
 	z-index: 10;
@@ -373,7 +373,7 @@ button:focus{
 .lbox-details {
     display: table-cell;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
 	position: relative;
 }
 
